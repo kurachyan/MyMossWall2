@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using MossTable;
+
 // 空白ページのアイテム テンプレートについては、http://go.microsoft.com/fwlink/?LinkId=234238 を参照してください
 
 namespace MyMossWall2
@@ -22,6 +24,9 @@ namespace MyMossWall2
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        CS_MossTable MT;           // MossTable
+//        MossDictionary MD;      // MossDictionary
+
         #region コンストラクタ
         public MainPage()
         {   // アプリケーション　コンストラクタ
@@ -29,6 +34,13 @@ namespace MyMossWall2
 
             // 初期表示をクリアする
             ClearResultTextBox();
+
+            // MossTable構築
+            MT = new CS_MossTable();
+
+//            // MossDictonary構築　及び、[NuN]登録
+//            MD = new MossDictionary();
+//            MD.Init();
         }
         #endregion
 
