@@ -4,10 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMossWall2", "MyMossWall2\MyMossWall2.csproj", "{51A18874-4A4D-48DC-8BC1-BEF0FD56B1BD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58DF6075-4A24-477E-A248-A68C1FD7B352} = {58DF6075-4A24-477E-A248-A68C1FD7B352}
+		{1F76ECC1-0B15-4E1D-92F1-3229DF3D0F4D} = {1F76ECC1-0B15-4E1D-92F1-3229DF3D0F4D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MossTable", "MossTable\MossTable.csproj", "{58DF6075-4A24-477E-A248-A68C1FD7B352}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MossDictionary", "MossDictionary\MossDictionary.csproj", "{1F76ECC1-0B15-4E1D-92F1-3229DF3D0F4D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58DF6075-4A24-477E-A248-A68C1FD7B352} = {58DF6075-4A24-477E-A248-A68C1FD7B352}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

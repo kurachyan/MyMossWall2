@@ -134,6 +134,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MossDictionary">
+      <HintPath>..\MossDictionary\bin\Debug\MossDictionary.dll</HintPath>
+    </Reference>
     <Reference Include="MossTable">
       <HintPath>..\MossTable\obj\Debug\MossTable.dll</HintPath>
     </Reference>
