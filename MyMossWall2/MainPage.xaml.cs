@@ -48,7 +48,18 @@ namespace MyMossWall2
         #region ［Ｅｘｅｃｕｔｅ］ボタン押下
         private void Button01_Click(object sender, RoutedEventArgs e)
         {   // [Execute]ボタン押下
-            WriteLineResult(@"Execute");
+            MT.Add(TextBox01.Text);
+            WriteLineResult("\nExecute");
+
+            for (int i = 0; i < MT.GetCount()+1; i++)
+            {
+                String _keyword;
+                _keyword = MT.Get(i);
+                if (_keyword != @"None")
+                {
+					WriteLineResult("{0}", MT.Value(_keyword));
+                }
+            }
         }
 		#endregion
 

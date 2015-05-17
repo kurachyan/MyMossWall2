@@ -21,10 +21,11 @@ namespace MossTable
             MossWork = new Image(0, "NuN");     // 作業領域作成
 
             // 初期情報設定
-            MossWork.SetLast(-1);
-            MossWork.SetItems("NuN");
-            Table.AddFirst(MossWork);           // 先頭に”ＮｕＮ”設定
-            this.Count = 0;
+            this.Init();
+//            MossWork.SetLast(-1);
+//            MossWork.SetItems("NuN");
+//            Table.AddFirst(MossWork);           // 先頭に”ＮｕＮ”設定
+//            this.Count = 0;
 //            Active = 0;
         }
 
@@ -203,11 +204,13 @@ namespace MossTable
                 _LastPos = MossWork.GetLast().ToString();
                 _NextPos = MossWork.GetNext().ToString();
 
-                _ValueString = @"[" + _flag + " " + _Seqno + " "+ _Name + " " + _LastPos + " " + _NextPos + " " + _Items + "]";
+                _Items = MossWork.GetItems().ToString();
+
+                _ValueString = @"[" + _flag + ": " + _Seqno + " "+ _Name + " (" + _LastPos + "," + _NextPos + ") \"" + _Items + "\"]";
             }
             else
             {
-                _ValueString = @"[None " + _Name + "]";
+                _ValueString = @"[None: " + _Name + "]";
             }
 
             return (_ValueString);
