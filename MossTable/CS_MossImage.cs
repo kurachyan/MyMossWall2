@@ -28,62 +28,62 @@ namespace MossImage
         //        }
         public Image(int i, String _Name)
         {   // コンストラクタ２
-            flag = true;        // 操作初期情報設定
-            SeqNo = i;
-            Name = _Name;
-            LastPos = 0;
-            NextPos = -1;
-            Items = _Name;
+            this.flag = true;        // 操作初期情報設定
+            this.SeqNo = i;
+            this.Name = _Name;
+            this.LastPos = 0;
+            this.NextPos = -1;
+            this.Items = _Name;
         }
         public void SetSeqNo(int i)
         {
-            SeqNo = i;          // シーケンス番号設定
+            this.SeqNo = i;          // シーケンス番号設定
         }
         public void SetLast(int i)
         {
-            LastPos = i;        // 元位置情報設定
+            this.LastPos = i;        // 元位置情報設定
         }
         public void SetNext(int i)
         {
-            NextPos = i;        // 接続先情報設定
+            this.NextPos = i;        // 接続先情報設定
         }
         public void SetItems(String word)
         {
-            Items = word;       // 要素情報設定
+            this.Items = word;       // 要素情報設定
         }
         public String GetName()
         {
-            return (Name);      // 要素情報取り出し
+            return (this.Name);      // 要素情報取り出し
         }
         public int GetLast()
         {
-            return (LastPos);   // 元位置情報取り出し
+            return (this.LastPos);   // 元位置情報取り出し
         }
         public int GetNext()
         {
-            return (NextPos);    // 接続先情報取り出し
+            return (this.NextPos);    // 接続先情報取り出し
         }
         public String GetItems()
         {
-            return (Items);      // 要素情報取り出し
+            return (this.Items);      // 要素情報取り出し
         }
         public int GetSeqNo()
         {
-            return (SeqNo);      // シーケンス番号取り出し
+            return (this.SeqNo);      // シーケンス番号取り出し
         }
         public Boolean Getflag()
         {
-            return (flag);      // 状態情報取り出し
+            return (this.flag);      // 状態情報取り出し
         }
         public void Chgflag()
         {
-            if (flag == true)
+            if (this.flag == true)
             {
-                flag = false;
+                this.flag = false;
             }
             else
             {
-                flag = true;
+                this.flag = true;
             }
         }
     };

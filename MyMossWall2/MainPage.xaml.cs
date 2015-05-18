@@ -27,6 +27,7 @@ namespace MyMossWall2
     {
         CS_MossTable MT;           // MossTable
         CS_MossDictionary MD;      // MossDictionary
+        MossAnalyze MA;            // MossAnalyze
 
         #region コンストラクタ
         public MainPage()
@@ -42,6 +43,9 @@ namespace MyMossWall2
             // MossDictonary構築　及び、[NuN]登録
             MD = new CS_MossDictionary();
 //            MD.Init();
+
+            // MossAnalyze構築
+            MA = new MossAnalyze();
         }
         #endregion
 
@@ -58,6 +62,19 @@ namespace MyMossWall2
                 if (_keyword != @"None")
                 {
 					WriteLineResult("{0}", MT.Value(_keyword));
+                }
+            }
+
+            MA.SetMT(MT);
+
+            WriteLineResult("\nAnalyze");
+            for (int i = 0; i < MA.GetCount() + 1; i++)
+            {
+                String _keyword;
+                _keyword = MA.Get(i);
+                if (_keyword != @"None")
+                {
+                    WriteLineResult("{0}", _keyword);
                 }
             }
         }

@@ -52,8 +52,23 @@ namespace MyMossWall2
 //        {
 //        }
 
-//        public String Get(int _Pos)
-//        {
-//        }
+        public String Get(int _Pos)
+        {
+            String _Result = this.MT.Get(_Pos);
+
+            if (_Result != @"None")
+            {   // 登録有り？
+                return (this.MT.Value(_Result));
+            }
+            else
+            {
+                return (@"None");
+            }
+        }
+
+        public int GetCount()
+        {   // 登録数確認
+            return (this.MT.GetCount());
+        }
     }
 }
